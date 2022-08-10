@@ -20,7 +20,7 @@ Really he wants. Check ! : https://www.youtube.com/watch?v=Pp1-fLQKmkk (1:43)
 
 <br>
 
-![alt text](https://github.com/rept0id/clippy/blob/clippy_main/assets/img/7qzj.gif?raw=true)
+![githubImg2](https://github.com/rept0id/clippy/blob/clippy_main/assets/img/githubImg1.gif?raw=true)
 
 # Description
 
@@ -48,6 +48,8 @@ Start Clippy and he will pop on your screen, staring at you.
 Click on Clippy and he goes away. Dont worry, you can start him again, he is here to stay.
 
 <br>
+
+![githubImg2](https://github.com/rept0id/clippy/blob/clippy_main/assets/img/githubImg1.gif?raw=true)
 
 # Developer notes
 
