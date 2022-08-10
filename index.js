@@ -34,8 +34,8 @@ function createWindow () {
   })
 
   const position = {
-    x : screen.getPrimaryDisplay().size.width - options.width,
-    y : screen.getPrimaryDisplay().size.height - options.height
+    x : screen.getPrimaryDisplay().size.width - options.width - 50,
+    y : screen.getPrimaryDisplay().size.height - options.height - 50
   }
 
   win.setPosition(position.x, position.y);
