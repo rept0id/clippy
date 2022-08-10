@@ -18,6 +18,10 @@ Looks like he wants to be a star again.
 
 Really he wants. Check ! : https://www.youtube.com/watch?v=Pp1-fLQKmkk (1:43) 
 
+<br>
+
+![alt text](https://github.com/rept0id/clippy/blob/clippy_main/assets/img/7qzj.gif?raw=true)
+
 # Description
 
 **I believe Clippy deserves some space on my desktop again.**
@@ -26,7 +30,7 @@ Really he wants. Check ! : https://www.youtube.com/watch?v=Pp1-fLQKmkk (1:43)
 
 <br>
 
-![alt text](https://github.com/rept0id/clippy/blob/clippy_main/assets/img/screenshot1.png?raw=true)
+![Screenshot](https://github.com/rept0id/clippy/blob/clippy_main/assets/img/screenshot1.png?raw=true)
 
 
 # Usage
