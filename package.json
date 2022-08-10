@@ -6,12 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
-	  "compile_win32": "electron-packager . clippy --platform=win32 --arch=x64"
+    "compile_win": "electron-builder -p never --win"
   },
   "author": "Rantouan Achmet",
   "license": "GPL-3.0",
   "devDependencies": {
     "electron": "^20.0.1",
+    "electron-builder": "^23.3.3",
     "electron-packager": "^15.5.1"
   }
 }
