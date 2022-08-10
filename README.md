@@ -16,7 +16,7 @@ Looks like you need some help.
 
 Looks like he wants to be a star again.
 
-Really he wants. Check ! : https://www.youtube.com/watch?v=Pp1-fLQKmkk (1:43) 
+Really he wants. Check ! : https://www.youtube.com/watch?v=Pp1-fLQKmkk (on 1:43) 
 
 <br>
 
