@@ -63,6 +63,6 @@ In order to run as a node app :
 
 In order to run as a windows executable :
 
-```npm compile_win```
+```npm run compile_win```
 
 ```Navigate to /dist and run the executable```
