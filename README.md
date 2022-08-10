@@ -30,7 +30,7 @@ Really he wants. Check ! : https://www.youtube.com/watch?v=Pp1-fLQKmkk (1:43)
 
 <br>
 
-![Screenshot](https://github.com/rept0id/clippy/blob/clippy_main/assets/img/screenshot1.png?raw=true)
+![Screenshot](https://github.com/rept0id/clippy/blob/clippy_main/assets/img/screenshot2.png?raw=true)
 
 
 # Usage
