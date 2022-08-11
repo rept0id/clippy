@@ -8,9 +8,9 @@
     "start": "electron .",
     "compile_win": "electron-builder --win",
     "compile_win2": "electron-builder --win portable",
-    "compile_mac": "electron-packager . --platform=darwin",
-    "compile_mac_2": "electron-packager . --platform=mas",
-    "compile_linux": "electron-packager . --platform=linux"
+    "compile_mac": "electron-packager . --platform=darwin --icon=/icon.ico",
+    "compile_mac_2": "electron-packager . --platform=mas --icon=/icon.ico",
+    "compile_linux": "electron-packager . --platform=linux --icon=/icon.ico"
   },
   "author": "Rantouan Achmet",
   "license": "GPL-3.0",
@@ -20,13 +20,13 @@
     "electron-packager": "^15.5.1"
   },
   "build": {
-    "files": [ 
+    "files": [
       "!clippy-darwin-x64",
       "!clippy-linux-x64",
       "!clippy-mas-x64",
-      "!clippy-darwin-x64.zip", 
-      "!clippy-linux-x64.zip", 
-      "!dist.zip" 
+      "!clippy-darwin-x64.zip",
+      "!clippy-linux-x64.zip",
+      "!dist.zip"
     ]
   }
 }
