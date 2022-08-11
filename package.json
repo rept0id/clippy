@@ -1,12 +1,15 @@
 {
   "name": "clippy",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "Clippy on your desktop staring at you",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "electron .",
     "start": "electron .",
-    "compile_win": "electron-builder -p never --win"
+    "compile_win": "electron-builder -p never -w",
+    "compile_mac": "electron-packager . --platform=darwin",
+    "compile_mac_2": "electron-packager . --platform=mas",
+    "compile_linux": "electron-packager . --platform=linux"
   },
   "author": "Rantouan Achmet",
   "license": "GPL-3.0",
@@ -14,5 +17,15 @@
     "electron": "^20.0.1",
     "electron-builder": "^23.3.3",
     "electron-packager": "^15.5.1"
+  },
+  "build": {
+    "files": [ 
+      "!clippy-darwin-x64",
+      "!clippy-linux-x64",
+      "!clippy-mas-x64",
+      "!clippy-darwin-x64.zip", 
+      "!clippy-linux-x64.zip", 
+      "!dist.zip" 
+    ]
   }
 }

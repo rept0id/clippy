@@ -20,3 +20,9 @@ npm-debug.log*
 /clippy-win32-x64
 /node_modules
 /dist
+/clippy-darwin-x64
+/clippy-linux-x64
+/clippy-mas-x64
+/clippy-darwin-x64.zip
+/clippy-linux-x64.zip
+/dist.zip
