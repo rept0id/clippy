@@ -1,6 +1,6 @@
 {
-    "width" : 250,
-    "height" : 250,
+    "width" : 400,
+    "height" : 300,
     "transparent":true,
     "frame":false,
     "alwaysOnTop":true

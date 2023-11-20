@@ -1,5 +1,7 @@
-const { app, BrowserWindow, screen, ipcMain } = require('electron')
-const path = require('path')
+/* global __dirname, process */
+
+const { app, BrowserWindow, screen, ipcMain } = require('electron');
+const path = require('path');
 
 /*
 
@@ -30,13 +32,13 @@ function createWindow () {
     },
     transparent: options.transparent, //default : true
     frame: options.frame, //default: false
-    icon: __dirname + '/assets/icon/icon.ico',
-  })
+    icon: __dirname + '/assets/icon/icon.ico'
+  });
 
   const position = {
     x : screen.getPrimaryDisplay().size.width - options.width - 50,
     y : screen.getPrimaryDisplay().size.height - options.height - 50
-  }
+  };
 
   win.setPosition(position.x, position.y);
 
@@ -56,18 +58,18 @@ app.whenReady().then(() => {
     if (BrowserWindow.getAllWindows().length === 0) {
       createWindow();
     }
-  })
+  });
 
   ipcMain.handle('quit-app', () => {
     app.quit();
   });
 
-})
+});
 
 //electron's code
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
-    app.quit()
+    app.quit();
   }
-})
+});

@@ -26,3 +26,4 @@ npm-debug.log*
 /clippy-darwin-x64.zip
 /clippy-linux-x64.zip
 /dist.zip
+/nbproject/private/

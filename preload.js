@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', () => {
   //call app close handler, from index.js, using ipcRenderer
 
   document.querySelector('body').addEventListener('click', () => {
-    ipcRenderer.invoke('quit-app');
+    //ipcRenderer.invoke('quit-app');
   });
 
 })
