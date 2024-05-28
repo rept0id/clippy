@@ -6,9 +6,9 @@
   "scripts": {
     "test": "electron .",
     "start": "electron .",
-    "compile_win": "electron-builder --win",
-    "compile_win2": "electron-builder --win portable",
-    "compile_linux": "electron-packager . --platform=linux --ignore=/dist --icon=resources/app/build/icon.ico"
+    "build_win": "electron-builder --win",
+    "build_win_portable": "electron-builder --win portable",
+    "build_linux": "electron-packager . --platform=linux --ignore=/dist --icon=build/icon.ico"
   },
   "author": "Rantouan Achmet",
   "license": "GPL-3.0",

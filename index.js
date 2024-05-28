@@ -43,7 +43,7 @@ function modalWindowCreate(text = "") {
     title: 'Clippy',
     frame: false,
     transparent: true,
-    icon: __dirname + '/assets/icon/icon.ico',
+    icon: __dirname + '/assets/icon/icon.png'
   });
 
   modalWindow.loadURL('data:text/html;charset=utf-8,' + encodeURIComponent(`
@@ -97,7 +97,7 @@ function mainWindowCreate() {
     },
     transparent: true,
     frame: false,
-    icon: __dirname + '/assets/icon/icon.ico'
+    icon: __dirname + '/assets/icon/icon.png'
   });
 
   /*** * * ***/
