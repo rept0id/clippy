@@ -13,6 +13,7 @@ const msgWelcome = `
   <br>
   <h5>Give the double-click a whirl to set the animation in motion and toggle the opening/closing of this modal.</h5>
   <h5>A single click sets the animation in motion.</h5>
+  <h5>Gently guiding your mouse over Clippy or giving it a jolly good press reveals the close button.</h5>
 `;
 
 /*** * * ***/

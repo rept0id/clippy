@@ -9,6 +9,21 @@
     <script src="libs/js/clippy/build/clippy.min.js"></script>
   </head>
   <body>
+    <button id="close-btn" class="close"></button>
+
+    <script>
+      let longPressTimeout;
+      document.querySelector("body").addEventListener('mousedown', function(event) {
+        longPressTimeout = setTimeout(function() {
+          document.querySelector("#close-btn").style.display = "block";
+        }, 1000);
+      });
+
+      document.querySelector("body").addEventListener('mouseup', function(event) {
+        clearTimeout(longPressTimeout);
+      });
+    </script>
+
     <script>
       clippy.load();
       clippy.load('Clippy', function(agent){

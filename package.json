@@ -8,9 +8,7 @@
     "start": "electron .",
     "compile_win": "electron-builder --win",
     "compile_win2": "electron-builder --win portable",
-    "compile_mac": "electron-packager . --platform=darwin --ignore=/dist --icon=build/icon.icns --overwrite",
-    "compile_mac_2": "electron-packager . --platform=mas --ignore=/dist",
-    "compile_linux": "electron-packager . --platform=linux --ignore=/dist"
+    "compile_linux": "electron-packager . --platform=linux --ignore=/dist --icon=resources/app/build/icon.ico"
   },
   "author": "Rantouan Achmet",
   "license": "GPL-3.0",

@@ -17,4 +17,8 @@ window.addEventListener('DOMContentLoaded', () => {
     ipcRenderer.invoke('dblclick');
   });
 
+  document.querySelector('#close-btn').addEventListener('click', () => {
+    ipcRenderer.invoke('quit-app');
+  });
+
 })

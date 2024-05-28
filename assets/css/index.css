@@ -11,3 +11,39 @@
 body {
     overflow: hidden;
 }
+
+#close-btn {
+    right: 0;
+    top: 0;
+    position: absolute;
+    display: none;
+}
+body:hover #close-btn {
+    display: block;
+}
+
+.close {
+    width: 20px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+    z-index: 9999999;
+}
+.close:before,
+.close:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 12px;
+    background-color: #cb3837;
+}
+.close:before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.close:after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
