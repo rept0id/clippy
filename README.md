@@ -1,6 +1,6 @@
 # clippy
 
-![Screenshot](https://github.com/rept0id/clippy/blob/clippy_main/assets/img/screenshot1.png?raw=true)
+![Screenshot](./assets/img/screenshot1.png)
 
 Clippy returns, now empowered by Electron !
 
