@@ -1,43 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Clippy</title>
-    <link rel="stylesheet" href="assets/css/index.css">
-    <script src="libs/js/jquery/jquery-1.7.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="libs/js/clippy/build/clippy.css" media="all">
-    <script src="libs/js/clippy/build/clippy.min.js"></script>
-    <link rel="icon" href="assets/icon/icon.png" type="image/png">
-  </head>
-  <body>
-    <button id="close-btn" class="close"></button>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Clippy</title>
+        <link rel="stylesheet" href="assets/css/index.css" />
+        <script src="libs/js/jquery/jquery-1.7.min.js"></script>
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="libs/js/clippy/build/clippy.css"
+            media="all"
+        />
+        <script src="libs/js/clippy/build/clippy.js"></script>
+        <link rel="icon" href="assets/icon/icon.png" type="image/png" />
+    </head>
+    <body>
+        <button id="close-btn" class="close"></button>
 
-    <script>
-      let longPressTimeout;
-      document.querySelector("body").addEventListener('mousedown', function(event) {
-        longPressTimeout = setTimeout(function() {
-          document.querySelector("#close-btn").style.display = "block";
-        }, 1000);
-      });
+        <script>
+            let longPressTimeout;
+            document
+                .querySelector("body")
+                .addEventListener("mousedown", function (event) {
+                    longPressTimeout = setTimeout(function () {
+                        document.querySelector("#close-btn").style.display =
+                            "block";
+                    }, 1000);
+                });
 
-      document.querySelector("body").addEventListener('mouseup', function(event) {
-        clearTimeout(longPressTimeout);
-      });
-    </script>
+            document
+                .querySelector("body")
+                .addEventListener("mouseup", function (event) {
+                    clearTimeout(longPressTimeout);
+                });
+        </script>
 
-    <script>
-      clippy.load();
-      clippy.load('Clippy', function(agent){
-          agent.moveTo(0,0);
-          agent.show();
+        <script>
+            clippy.load();
+            clippy.load("Clippy", function (agent) {
+                agent.moveTo(0, 0);
+                agent.show();
 
-          agent._startDrag = ()=>{}
-          agent._onMouseDown = ()=>{}
+                agent._startDrag = () => {};
+                agent._onMouseDown = () => {};
 
-          agent._el.on('click', ()=>{
-            agent.animate();
-          });
-      });
-    </script>
-  </body>
+                agent._el.on("click", () => {
+                    agent.animate();
+                });
+            });
+        </script>
+    </body>
 </html>

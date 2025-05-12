@@ -1,7 +1,7 @@
 /* global __dirname, process */
 
-const { app, BrowserWindow, screen, ipcMain } = require('electron');
-const path = require('path');
+const { app, BrowserWindow, screen, ipcMain } = require("electron");
+const path = require("path");
 
 /*** * * ***/
 
@@ -21,13 +21,12 @@ const msgWelcome = `
 let modalWindow;
 
 function modalWindowCreate(text = "") {
-
   const display = screen.getDisplayNearestPoint(screen.getCursorScreenPoint());
   const displayW = display.workArea.width;
   const displayH = display.workArea.height;
 
-  const modalMarginTopBottom = clippyW*2;
-  const modalMarginLeftRight = clippyH*2;
+  const modalMarginTopBottom = clippyW * 2;
+  const modalMarginLeftRight = clippyH * 2;
 
   /*** * * ***/
 
@@ -38,19 +37,22 @@ function modalWindowCreate(text = "") {
   /*** * * ***/
 
   modalWindow = new BrowserWindow({
-    width: (displayW - modalMarginTopBottom),
-    height: (displayH - modalMarginLeftRight),
-    title: 'Clippy',
+    width: displayW - modalMarginTopBottom,
+    height: displayH - modalMarginLeftRight,
+    title: "Clippy",
     frame: false,
     transparent: true,
-    icon: __dirname + '/assets/icon/icon.png'
+    icon: __dirname + "/assets/icon/icon.png",
   });
 
-  modalWindow.loadURL('data:text/html;charset=utf-8,' + encodeURIComponent(`
+  modalWindow.loadURL(
+    "data:text/html;charset=utf-8," +
+      encodeURIComponent(
+        `
     <html>
       <head>
         <style>
-          body { 
+          body {
             color: white;
             margin: 0;
             font-family: system-ui;
@@ -67,12 +69,15 @@ function modalWindowCreate(text = "") {
       </head>
       <body>
         <div id="content">
-          `+text+`
+          ` +
+          text +
+          `
         </div>
       </body>
     </html>
-  `));
-
+  `,
+      ),
+  );
 }
 
 function modalWindowDestroy() {
@@ -81,7 +86,6 @@ function modalWindowDestroy() {
 }
 
 function mainWindowCreate() {
-
   const display = screen.getDisplayNearestPoint(screen.getCursorScreenPoint());
   const displayW = display.workArea.width;
   const displayH = display.workArea.height;
@@ -91,34 +95,32 @@ function mainWindowCreate() {
   const win = new BrowserWindow({
     width: clippyW,
     height: clippyH,
-    title: 'Clippy',
+    title: "Clippy",
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js')
+      preload: path.join(__dirname, "preload.js"),
     },
     transparent: true,
     frame: false,
-    icon: __dirname + '/assets/icon/icon.png'
+    icon: __dirname + "/assets/icon/icon.png",
   });
 
   /*** * * ***/
 
-  win.setPosition((displayW - clippyW), (displayH - clippyH));
+  win.setPosition(displayW - clippyW, displayH - clippyH);
 
-  win.setAlwaysOnTop(true, 'screen');
+  win.setAlwaysOnTop(true, "screen");
 
-  win.loadFile('index.html');
+  win.loadFile("index.html");
 
   // win.setIgnoreMouseEvents(true, { forward: true });
-
 }
 
 app.whenReady().then(() => {
-
   mainWindowCreate();
 
   /*** * * ***/
 
-  app.on('activate', () => {
+  app.on("activate", () => {
     if (BrowserWindow.getAllWindows().length === 0) {
       mainWindowCreate();
     }
@@ -126,11 +128,11 @@ app.whenReady().then(() => {
 
   /*** * * ***/
 
-  ipcMain.handle('quit-app', () => {
+  ipcMain.handle("quit-app", () => {
     app.quit();
   });
 
-  ipcMain.handle('dblclick', () => {
+  ipcMain.handle("dblclick", () => {
     if (typeof modalWindow != "undefined") {
       modalWindowDestroy();
     } else {
@@ -139,11 +141,10 @@ app.whenReady().then(() => {
   });
 
   modalWindowCreate(msgWelcome);
-
 });
 
-app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') {
+app.on("window-all-closed", () => {
+  if (process.platform !== "darwin") {
     app.quit();
   }
 });
